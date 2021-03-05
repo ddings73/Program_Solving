@@ -1,2 +1,3 @@
-﻿  sample.cpp
+﻿  BST.cpp
+C:\Users\elfn7\source\repos\Program_Solving\Program_Solving\BST.cpp(12,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'Node' 왼쪽은 무시됩니다.
   Program_Solving.vcxproj -> C:\Users\elfn7\source\repos\Program_Solving\Debug\Program_Solving.exe
