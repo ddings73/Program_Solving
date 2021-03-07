@@ -87,9 +87,18 @@ void insert(Node* node, int key) {
 	}
 }
 
+int Children(Node* node) {
+	int ret = 0;
+	if (node->Left != NULL) ret++;
+	if (node->Right != NULL) ret += 2;
+	return ret;
+}
 
 void Delete(Node* node, int key) {
+	
+	Node* root = node;
 
+	// key값의 노드 찾기.
 	while (node->key != key) {
 		if (node->key > key) {
 			node = node->Left;
@@ -99,79 +108,69 @@ void Delete(Node* node, int key) {
 		}
 	}
 
-	if (node->Left == NULL && node->Right == NULL) {
-		if (node->Parent->key > node->key) {
+	switch (Children(node)) {
+	case 0:
+		if (node->Parent->Left == node) {
 			node->Parent->Left = NULL;
 		}
 		else {
 			node->Parent->Right = NULL;
 		}
+
 		free(node);
-	}
-	else if (node->Right != NULL) {
-		
-		//삭제할 노드보다 크면서 제일 작은 키값의 노드 얻기
-		Node* next = Minimum(node->Right);
-		
-		// 삭제할 노드보다 크면서 제일 작은 노드의 부모노드와의 관계를 끊음
-		if (next->Parent->key > next->key) {
-			next->Parent->Left = next->Right;
+		break;
+	case 1: // 왼쪽 자식만 존재
+		if (node->Parent->Left == node) {
+			node->Parent->Left = node->Left;
+			node->Left->Parent = node->Parent;
 		}
 		else {
-			next->Parent->Right = next->Right;
-		}
-
-		next->Right = node->Right;
-		next->Left = node->Left;
-		
-
-		//삭제된 노드의 자리를 새로 올라온 노드로 변경
-		if (node->Parent->key > node->key) {
-			node->Parent->Left = next;
-		}
-		else {
-			node->Parent->Right = next;
+			node->Parent->Right = node->Left;
+			node->Left->Parent = node->Parent;
 		}
 
 		free(node);
-	}
-	else if(node->Left != NULL) {
-		//삭제할 노드보다 작으면서 제일 큰 키값의 노드 얻기
-		Node* next = Maximum(node->Left);
-
-		// 삭제할 노드보다 작으면서 제일 큰 노드의 부모노드와의 관계를 끊음
-		if (next->Parent->key > next->key) {
-			next->Parent->Left = next-> Left;
+		break;
+	case 2: // 오른쪽 자식만 존재
+		if (node->Parent->Left == node) {
+			node->Parent->Left = node->Right;
+			node->Right->Parent = node->Parent;
 		}
 		else {
-			next->Parent->Right = next->Left;
-		}
-
-		next->Right = node->Right;
-		next->Left = node->Left;
-
-		//삭제된 노드의 자리를 새로 올라온 노드로 변경
-		if (node->Parent->key > node->key) {
-			node->Parent->Left = next;
-		}
-		else {
-			node->Parent->Right = next;
+			node->Parent->Right = node->Right;
+			node->Right->Parent = node->Parent;
 		}
 
 		free(node);
+		break;
+	default: // 양쪽 자식 모두 존재
+		Node* successor = Successor(node, node->key);
+		int tmp = successor->key;
+		successor->key = node->key;
+		node->key = tmp;
+
+		Delete(successor, successor->key);
+		break;
 	}
+
 }
 
 
-void inorder(Node* node) {
+void inorder(Node* node, int tab) {
 	if (node->Left != NULL) {
-		inorder(node->Left);
+		inorder(node->Left, tab + 1);
+	}
+
+	int i = 0;
+	while (i < tab) {
+		cout << "\t";
+		i++;
 	}
 
 	cout << node->key << '\n';
 
 	if (node->Right != NULL) {
-		inorder(node->Right);
+		inorder(node->Right, tab + 1);
 	}
 }
 
@@ -189,11 +188,12 @@ int main() {
 
 
 
-	inorder(root);
+	inorder(root, 0);
 
 	Delete(root, 6);
 
 
+	inorder(root, 0);
 	
 	return 0;
 }
