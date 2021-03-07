@@ -1,6 +1,7 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include<cmath>
 using namespace std;
 #pragma warning(disable:4996);
 
@@ -22,10 +23,11 @@ int main() {
 			break;
 
 		small = big = total = 0;
+		student.clear();
 		for (int i = 0; i < n; i++) {
-			float money;
+			double money;
 			cin >> money;
-			student.push_back(money * 100);
+			student.push_back(money * 100 + 0.5);
 			total += student.back();
 		}
 
@@ -47,10 +49,10 @@ int main() {
 			}
 		}
 
-		float ret = max(big_gap, small_gap);
-		ret /= 100;
-		cout << '$' << ret << '\n';
+		int ret = max(big_gap, small_gap);
+		cout << '$' << ret / 100.0 << '\n';
 	}
 
 	return 0;
 }
+
