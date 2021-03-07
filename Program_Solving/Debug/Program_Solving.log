@@ -1,3 +1,13 @@
-﻿  BST.cpp
-C:\Users\elfn7\source\repos\Program_Solving\Program_Solving\BST.cpp(12,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'Node' 왼쪽은 무시됩니다.
-  Program_Solving.vcxproj -> C:\Users\elfn7\source\repos\Program_Solving\Debug\Program_Solving.exe
+﻿  10137.cpp
+C:\Users\FL4K\source\repos\Program_solve\Program_Solving\10137.cpp(5,32): warning C4081: 'newline'이(가) 있어야 하는데 ';'이(가) 있습니다.
+C:\Users\FL4K\source\repos\Program_solve\Program_Solving\10137.cpp(28,28): warning C4244: '인수': 'float'에서 '_Ty'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\FL4K\source\repos\Program_solve\Program_Solving\10137.cpp(50,13): warning C4244: '초기화 중': 'const _Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+  Program_Solving.vcxproj -> C:\Users\FL4K\source\repos\Program_solve\Debug\Program_Solving.exe

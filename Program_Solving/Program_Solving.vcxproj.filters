@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Problem">
+      <UniqueIdentifier>{ae694a54-d6cc-47a8-844e-4e611cf93faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p100">
+      <UniqueIdentifier>{5467b336-1e6f-4718-9028-7fb6314d085c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10137">
+      <UniqueIdentifier>{f775a0b9-4325-41a6-bb2f-258c965a4a38}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="p100.cpp">
+      <Filter>소스 파일\Problem\p100</Filter>
+    </ClCompile>
+    <ClCompile Include="10137.cpp">
+      <Filter>소스 파일\Problem\p10137</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="p100.out">
+      <Filter>소스 파일\Problem\p100</Filter>
+    </None>
+    <None Include="p100.inp">
+      <Filter>소스 파일\Problem\p100</Filter>
+    </None>
+    <None Include="10137.inp">
+      <Filter>소스 파일\Problem\p10137</Filter>
+    </None>
+    <None Include="10137.out">
+      <Filter>소스 파일\Problem\p10137</Filter>
+    </None>
   </ItemGroup>
 </Project>
