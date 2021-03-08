@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\Problem\p10137">
       <UniqueIdentifier>{f775a0b9-4325-41a6-bb2f-258c965a4a38}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Problem\p679">
+      <UniqueIdentifier>{2560f96d-fee9-45ca-821a-c823a98cae10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp">
@@ -32,6 +35,9 @@
     </ClCompile>
     <ClCompile Include="10137.cpp">
       <Filter>소스 파일\Problem\p10137</Filter>
+    </ClCompile>
+    <ClCompile Include="p679.cpp">
+      <Filter>소스 파일\Problem\p679</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +52,12 @@
     </None>
     <None Include="10137.out">
       <Filter>소스 파일\Problem\p10137</Filter>
+    </None>
+    <None Include="p679.inp">
+      <Filter>소스 파일\Problem\p679</Filter>
+    </None>
+    <None Include="p679.out">
+      <Filter>소스 파일\Problem\p679</Filter>
     </None>
   </ItemGroup>
 </Project>

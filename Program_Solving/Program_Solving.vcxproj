@@ -139,17 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="10137.cpp" />
+    <ClCompile Include="10137.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BST.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="p100.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="p679.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="10137.inp" />
     <None Include="10137.out" />
+    <None Include="p679.inp" />
+    <None Include="p679.out" />
     <None Include="p100.inp" />
     <None Include="p100.out" />
   </ItemGroup>
