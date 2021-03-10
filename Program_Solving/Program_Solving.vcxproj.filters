@@ -25,6 +25,15 @@
     <Filter Include="소스 파일\Problem\p679">
       <UniqueIdentifier>{2560f96d-fee9-45ca-821a-c823a98cae10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Problem\p10010">
+      <UniqueIdentifier>{389d42b2-ee20-45fe-9ad0-9b908a5c70e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10469">
+      <UniqueIdentifier>{f2187db7-803a-4726-9263-fdea8c3799f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10150">
+      <UniqueIdentifier>{ab21644c-87b5-4d79-b434-fedc521e9c84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp">
@@ -38,6 +47,15 @@
     </ClCompile>
     <ClCompile Include="p679.cpp">
       <Filter>소스 파일\Problem\p679</Filter>
+    </ClCompile>
+    <ClCompile Include="10010.cpp">
+      <Filter>소스 파일\Problem\p10010</Filter>
+    </ClCompile>
+    <ClCompile Include="10469.cpp">
+      <Filter>소스 파일\Problem\p10469</Filter>
+    </ClCompile>
+    <ClCompile Include="10150.cpp">
+      <Filter>소스 파일\Problem\p10150</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +76,24 @@
     </None>
     <None Include="p679.out">
       <Filter>소스 파일\Problem\p679</Filter>
+    </None>
+    <None Include="10010.inp">
+      <Filter>소스 파일\Problem\p10010</Filter>
+    </None>
+    <None Include="10010.out">
+      <Filter>소스 파일\Problem\p10010</Filter>
+    </None>
+    <None Include="10150.inp">
+      <Filter>소스 파일\Problem\p10150</Filter>
+    </None>
+    <None Include="10150.out">
+      <Filter>소스 파일\Problem\p10150</Filter>
+    </None>
+    <None Include="10469.inp">
+      <Filter>소스 파일\Problem\p10469</Filter>
+    </None>
+    <None Include="10469.out">
+      <Filter>소스 파일\Problem\p10469</Filter>
     </None>
   </ItemGroup>
 </Project>
