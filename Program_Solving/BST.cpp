@@ -89,6 +89,7 @@ void insert(Node* node, int key) {
 
 
 void Delete(Node* node, int key) {
+	Node* root = node;
 
 	while (node->key != key) {
 		if (node->key > key) {
@@ -108,57 +109,33 @@ void Delete(Node* node, int key) {
 		}
 		free(node);
 	}
-	else if (node->Right != NULL) {
-		
-		//삭제할 노드보다 크면서 제일 작은 키값의 노드 얻기
-		Node* next = Minimum(node->Right);
-		
-		// 삭제할 노드보다 크면서 제일 작은 노드의 부모노드와의 관계를 끊음
-		if (next->Parent->key > next->key) {
-			next->Parent->Left = next->Right;
-		}
-		else {
-			next->Parent->Right = next->Right;
-		}
+	else if (node->Left == NULL){
 
-		next->Right = node->Right;
-		next->Left = node->Left;
+		node->Right->Parent = node->Parent;
 		
-
-		//삭제된 노드의 자리를 새로 올라온 노드로 변경
 		if (node->Parent->key > node->key) {
-			node->Parent->Left = next;
+			node->Parent->Left = node->Right;
 		}
 		else {
-			node->Parent->Right = next;
+			node->Parent->Right = node->Right;
 		}
-
 		free(node);
 	}
-	else if(node->Left != NULL) {
-		//삭제할 노드보다 작으면서 제일 큰 키값의 노드 얻기
-		Node* next = Maximum(node->Left);
+	else if (node->Right == NULL) {
 
-		// 삭제할 노드보다 작으면서 제일 큰 노드의 부모노드와의 관계를 끊음
-		if (next->Parent->key > next->key) {
-			next->Parent->Left = next-> Left;
-		}
-		else {
-			next->Parent->Right = next->Left;
-		}
+		node->Left->Parent = node->Parent;
 
-		next->Right = node->Right;
-		next->Left = node->Left;
-
-		//삭제된 노드의 자리를 새로 올라온 노드로 변경
 		if (node->Parent->key > node->key) {
-			node->Parent->Left = next;
+			node->Parent->Left = node->Left;
 		}
 		else {
-			node->Parent->Right = next;
+			node->Parent->Right = node->Left;
 		}
-
 		free(node);
+	}
+	else {
+		Node* next = Successor(root, key);
+
 	}
 }
 
