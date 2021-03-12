@@ -13,10 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Problem">
+      <UniqueIdentifier>{ae694a54-d6cc-47a8-844e-4e611cf93faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p100">
+      <UniqueIdentifier>{5467b336-1e6f-4718-9028-7fb6314d085c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10137">
+      <UniqueIdentifier>{f775a0b9-4325-41a6-bb2f-258c965a4a38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p679">
+      <UniqueIdentifier>{2560f96d-fee9-45ca-821a-c823a98cae10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10010">
+      <UniqueIdentifier>{389d42b2-ee20-45fe-9ad0-9b908a5c70e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10469">
+      <UniqueIdentifier>{f2187db7-803a-4726-9263-fdea8c3799f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\p10150">
+      <UniqueIdentifier>{ab21644c-87b5-4d79-b434-fedc521e9c84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="p100.cpp">
+      <Filter>소스 파일\Problem\p100</Filter>
+    </ClCompile>
+    <ClCompile Include="10137.cpp">
+      <Filter>소스 파일\Problem\p10137</Filter>
+    </ClCompile>
+    <ClCompile Include="p679.cpp">
+      <Filter>소스 파일\Problem\p679</Filter>
+    </ClCompile>
+    <ClCompile Include="10010.cpp">
+      <Filter>소스 파일\Problem\p10010</Filter>
+    </ClCompile>
+    <ClCompile Include="10469.cpp">
+      <Filter>소스 파일\Problem\p10469</Filter>
+    </ClCompile>
+    <ClCompile Include="10150.cpp">
+      <Filter>소스 파일\Problem\p10150</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="p100.out">
+      <Filter>소스 파일\Problem\p100</Filter>
+    </None>
+    <None Include="p100.inp">
+      <Filter>소스 파일\Problem\p100</Filter>
+    </None>
+    <None Include="10137.inp">
+      <Filter>소스 파일\Problem\p10137</Filter>
+    </None>
+    <None Include="10137.out">
+      <Filter>소스 파일\Problem\p10137</Filter>
+    </None>
+    <None Include="p679.inp">
+      <Filter>소스 파일\Problem\p679</Filter>
+    </None>
+    <None Include="p679.out">
+      <Filter>소스 파일\Problem\p679</Filter>
+    </None>
+    <None Include="10010.inp">
+      <Filter>소스 파일\Problem\p10010</Filter>
+    </None>
+    <None Include="10010.out">
+      <Filter>소스 파일\Problem\p10010</Filter>
+    </None>
+    <None Include="10150.inp">
+      <Filter>소스 파일\Problem\p10150</Filter>
+    </None>
+    <None Include="10150.out">
+      <Filter>소스 파일\Problem\p10150</Filter>
+    </None>
+    <None Include="10469.inp">
+      <Filter>소스 파일\Problem\p10469</Filter>
+    </None>
+    <None Include="10469.out">
+      <Filter>소스 파일\Problem\p10469</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -87,10 +87,18 @@ void insert(Node* node, int key) {
 	}
 }
 
+int Children(Node* node) {
+	int ret = 0;
+	if (node->Left != NULL) ret++;
+	if (node->Right != NULL) ret += 2;
+	return ret;
+}
 
 void Delete(Node* node, int key) {
+	
 	Node* root = node;
 
+	// key값의 노드 찾기.
 	while (node->key != key) {
 		if (node->key > key) {
 			node = node->Left;
@@ -100,55 +108,69 @@ void Delete(Node* node, int key) {
 		}
 	}
 
-	if (node->Left == NULL && node->Right == NULL) {
-		if (node->Parent->key > node->key) {
+	switch (Children(node)) {
+	case 0:
+		if (node->Parent->Left == node) {
 			node->Parent->Left = NULL;
 		}
 		else {
 			node->Parent->Right = NULL;
 		}
+
 		free(node);
-	}
-	else if (node->Left == NULL){
-
-		node->Right->Parent = node->Parent;
-		
-		if (node->Parent->key > node->key) {
-			node->Parent->Left = node->Right;
-		}
-		else {
-			node->Parent->Right = node->Right;
-		}
-		free(node);
-	}
-	else if (node->Right == NULL) {
-
-		node->Left->Parent = node->Parent;
-
-		if (node->Parent->key > node->key) {
+		break;
+	case 1: // 왼쪽 자식만 존재
+		if (node->Parent->Left == node) {
 			node->Parent->Left = node->Left;
+			node->Left->Parent = node->Parent;
 		}
 		else {
 			node->Parent->Right = node->Left;
+			node->Left->Parent = node->Parent;
 		}
-		free(node);
-	}
-	else {
-		Node* next = Successor(root, key);
 
+		free(node);
+		break;
+	case 2: // 오른쪽 자식만 존재
+		if (node->Parent->Left == node) {
+			node->Parent->Left = node->Right;
+			node->Right->Parent = node->Parent;
+		}
+		else {
+			node->Parent->Right = node->Right;
+			node->Right->Parent = node->Parent;
+		}
+
+		free(node);
+		break;
+	default: // 양쪽 자식 모두 존재
+		Node* successor = Successor(node, node->key);
+		int tmp = successor->key;
+		successor->key = node->key;
+		node->key = tmp;
+
+		Delete(successor, successor->key);
+		break;
 	}
+
 }
 
 
-void inorder(Node* node) {
+void inorder(Node* node, int tab) {
 	if (node->Left != NULL) {
-		inorder(node->Left);
+		inorder(node->Left, tab + 1);
+	}
+
+	int i = 0;
+	while (i < tab) {
+		cout << "\t";
+		i++;
 	}
 
 	cout << node->key << '\n';
 
 	if (node->Right != NULL) {
-		inorder(node->Right);
+		inorder(node->Right, tab + 1);
 	}
 }
 
@@ -166,11 +188,12 @@ int main() {
 
 
 
-	inorder(root);
+	inorder(root, 0);
 
 	Delete(root, 6);
 
 
+	inorder(root, 0);
 	
 	return 0;
 }
