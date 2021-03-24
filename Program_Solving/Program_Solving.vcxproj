@@ -158,6 +158,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="D:\Desktop\닭\Program_Solving\point.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="D:\Desktop\닭\Program_Solving\tangent.cpp" />
     <ClCompile Include="p100.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -183,6 +187,10 @@
     <None Include="10150.out" />
     <None Include="10469.inp" />
     <None Include="10469.out" />
+    <None Include="D:\Desktop\닭\Program_Solving\point.inp" />
+    <None Include="D:\Desktop\닭\Program_Solving\point.out" />
+    <None Include="D:\Desktop\닭\Program_Solving\tangent.inp" />
+    <None Include="D:\Desktop\닭\Program_Solving\tangent.out" />
     <None Include="p384.inp" />
     <None Include="p384.out" />
     <None Include="p679.inp" />

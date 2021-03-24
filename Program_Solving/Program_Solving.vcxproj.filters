@@ -43,6 +43,12 @@
     <Filter Include="소스 파일\Problem\RBT">
       <UniqueIdentifier>{a4bab3ac-84a3-4773-9838-3e0f3a302d9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Problem\point">
+      <UniqueIdentifier>{2ca0abb4-6c74-46f5-bc38-f2da572203bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\tangent">
+      <UniqueIdentifier>{e3bcbcc0-6f1c-4277-8510-e17f4d6e5429}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp">
@@ -74,6 +80,12 @@
     </ClCompile>
     <ClCompile Include="rbt.cpp">
       <Filter>소스 파일\Problem\RBT</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Desktop\닭\Program_Solving\point.cpp">
+      <Filter>소스 파일\Problem\point</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Desktop\닭\Program_Solving\tangent.cpp">
+      <Filter>소스 파일\Problem\tangent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +142,18 @@
     </None>
     <None Include="rbt.out">
       <Filter>소스 파일\Problem\RBT</Filter>
+    </None>
+    <None Include="D:\Desktop\닭\Program_Solving\point.inp">
+      <Filter>소스 파일\Problem\point</Filter>
+    </None>
+    <None Include="D:\Desktop\닭\Program_Solving\point.out">
+      <Filter>소스 파일\Problem\point</Filter>
+    </None>
+    <None Include="D:\Desktop\닭\Program_Solving\tangent.out">
+      <Filter>소스 파일\Problem\tangent</Filter>
+    </None>
+    <None Include="D:\Desktop\닭\Program_Solving\tangent.inp">
+      <Filter>소스 파일\Problem\tangent</Filter>
     </None>
   </ItemGroup>
 </Project>
