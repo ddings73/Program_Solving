@@ -34,6 +34,15 @@
     <Filter Include="소스 파일\Problem\p10150">
       <UniqueIdentifier>{ab21644c-87b5-4d79-b434-fedc521e9c84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Problem\p384">
+      <UniqueIdentifier>{4859fd9b-905a-4fec-b729-9741e9ed95f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\snail">
+      <UniqueIdentifier>{31e7638a-477f-451c-a800-4012a13ecbf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Problem\RBT">
+      <UniqueIdentifier>{a4bab3ac-84a3-4773-9838-3e0f3a302d9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp">
@@ -56,6 +65,15 @@
     </ClCompile>
     <ClCompile Include="10150.cpp">
       <Filter>소스 파일\Problem\p10150</Filter>
+    </ClCompile>
+    <ClCompile Include="p384.cpp">
+      <Filter>소스 파일\Problem\p384</Filter>
+    </ClCompile>
+    <ClCompile Include="snail.cpp">
+      <Filter>소스 파일\Problem\snail</Filter>
+    </ClCompile>
+    <ClCompile Include="rbt.cpp">
+      <Filter>소스 파일\Problem\RBT</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +112,24 @@
     </None>
     <None Include="10469.out">
       <Filter>소스 파일\Problem\p10469</Filter>
+    </None>
+    <None Include="p384.inp">
+      <Filter>소스 파일\Problem\p384</Filter>
+    </None>
+    <None Include="p384.out">
+      <Filter>소스 파일\Problem\p384</Filter>
+    </None>
+    <None Include="snail.inp">
+      <Filter>소스 파일\Problem\snail</Filter>
+    </None>
+    <None Include="snail.out">
+      <Filter>소스 파일\Problem\snail</Filter>
+    </None>
+    <None Include="rbt.inp">
+      <Filter>소스 파일\Problem\RBT</Filter>
+    </None>
+    <None Include="rbt.out">
+      <Filter>소스 파일\Problem\RBT</Filter>
     </None>
   </ItemGroup>
 </Project>
